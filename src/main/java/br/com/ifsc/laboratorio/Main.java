@@ -8,6 +8,7 @@ public class Main {
     MongoConnectionUtil mongoClient = MongoConnectionUtil.getInstance();
     MongoCollection col = mongoClient.getCollection("laboratorio");
     System.out.println(col.getName());
+
     
     MongoDAO<Cliente> cliente =  new MongoDAO<Cliente>(Cliente.class);
       for (Cliente c : cliente.getAll()) {
